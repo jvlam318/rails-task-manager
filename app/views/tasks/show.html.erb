@@ -1,0 +1,12 @@
+<div class="container border mt-2 p-3">
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+
+<%= link_to "edit task", task_edit_path(@task), :class => "btn btn-warning" %>
+
+<p>
+  <%= @task.completed ? "☑ This task is complete." : "☐ This task is not completed yet." %>
+</p>
+
+<%= link_to "back to tasks", tasks_path, :class => "btn btn-primary" %>
+</div>
